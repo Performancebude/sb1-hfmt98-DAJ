@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager | Dr. Jensen Forensics</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+  <script src="https://unpkg.com/decap-cms@^3.1.3/dist/decap-cms.js"></script>
+  <script>
+    const config = {
+      backend: {
+        name: 'git-gateway',
+        branch: 'main',
+      },
+      load_config_file: false,
+      media_folder: "public/images",
+      public_folder: "/images",
+      collections: [
+        {
+          name: "services",
+          label: "Services",
+          folder: "src/content/services",
+          create: true,
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Description", name: "description", widget: "text" },
+            { label: "Icon", name: "icon", widget: "string" },
+            { label: "Order", name: "order", widget: "number" },
+            { label: "Content", name: "body", widget: "markdown" }
+          ]
+        },
+        {
+          name: "testimonials",
+          label: "Testimonials",
+          folder: "src/content/testimonials",
+          create: true,
+          fields: [
+            { label: "Role", name: "role", widget: "string" },
+            { label: "Quote", name: "quote", widget: "text" },
+            { label: "Date", name: "date", widget: "date" }
+          ]
+        }
+      ]
+    };
+    window.CMS.init({ config });
+  </script>
+</body>
+</html>

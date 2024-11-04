@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "services"
+    label: "Services"
+    folder: "src/content/services"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Icon", name: "icon", widget: "string" }
+      - { label: "Order", name: "order", widget: "number" }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "src/content/testimonials"
+    create: true
+    fields:
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Quote", name: "quote", widget: "text" }
+      - { label: "Date", name: "date", widget: "date" }
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Contact Information"
+        name: "contact"
+        file: "src/content/settings/contact.yml"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Address", name: "address", widget: "text" }
+          - label: "Office Hours"
+            name: "hours"
+            widget: "list"
+            fields:
+              - { label: "Day", name: "day", widget: "string" }
+              - { label: "Hours", name: "time", widget: "string" }

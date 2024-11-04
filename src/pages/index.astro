@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Expertise from '../components/Expertise.astro';
+import Services from '../components/Services.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import { SEO } from 'astro-seo';
+
+const title = "Dr. Anastasia Jensen - Forensische Gutachterin in Flensburg";
+const description = "Forensische Gutachterin mit über 15 Jahren Erfahrung. Wissenschaftlich fundierte und gerichtlich anerkannte Gutachten in Flensburg und Umgebung.";
+---
+
+<Layout title={title}>
+  <SEO
+    title={title}
+    description={description}
+    openGraph={{
+      basic: {
+        title: title,
+        type: "website",
+        image: "/images/og-image.jpg",
+      }
+    }}
+  />
+  
+  <Header />
+  <Hero />
+  <Expertise />
+  <Services />
+  <Testimonials />
+  <Contact />
+  <Footer />
+</Layout>

@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Impressum - Dr. Anastasia Jensen">
+  <Header />
+  
+  <main class="pt-24 pb-20">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold mb-8">Impressum</h1>
+      
+      <div class="prose max-w-none">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>
+          Dr. Anastasia Jensen<br>
+          Forensische Gutachterin<br>
+          Musterstraße 123<br>
+          24937 Flensburg
+        </p>
+        
+        <h2>Kontakt</h2>
+        <p>
+          Telefon: +49 (0) 123 456789<br>
+          E-Mail: contact@dr-jensen.de
+        </p>
+        
+        <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+        <p>
+          Berufsbezeichnung: Forensische Gutachterin<br>
+          Zuständige Kammer: Deutsche Gesellschaft für Forensische Wissenschaft<br>
+          Verliehen in: Deutschland
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

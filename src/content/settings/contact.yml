@@ -1,0 +1,10 @@
+email: contact@dr-jensen.de
+phone: +49 (0) 123 456789
+address: |
+  Musterstraße 123
+  24937 Flensburg
+hours:
+  - day: Montag - Freitag
+    time: 09:00 - 17:00 Uhr
+  - day: Samstag - Sonntag
+    time: Nach Vereinbarung
